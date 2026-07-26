@@ -57,6 +57,16 @@ jobs:
           cat build.md >> "$GITHUB_OUTPUT"
           echo "${DELIM}" >> "$GITHUB_OUTPUT"
           cp -f build.md build.tmp
+      - name: Download Extra Assets
+        run: |
+          cd build || exit 0
+          # Download latest MicroG
+          MICROG_URL=$(curl -sL https://api.github.com/repos/ReVanced/GmsCore/releases/latest | jq -r '.assets[] | select(.name | endswith(".apk") and (contains("hw") | not)) | .browser_download_url' | head -n 1)
+          if [ -n "$MICROG_URL" ]; then curl -sL "$MICROG_URL" -o "MicroG.apk"; fi
+          # Download latest Zygisk-Detach
+          DETACH_URL=$(curl -sL https://api.github.com/repos/j-hc/zygisk-detach/releases/latest | jq -r '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
+          if [ -n "$DETACH_URL" ]; then curl -sL "$DETACH_URL" -o "zygisk-detach.zip"; fi
+          cd ..
       
       - name: Upload release
         env:

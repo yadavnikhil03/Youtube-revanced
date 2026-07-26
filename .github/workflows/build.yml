@@ -40,9 +40,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG=$(gh release list -L 1 | awk -F '\t' '{print $3}')
-          if [ -z "$TAG" ]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
+          echo "NEXT_VER_CODE=$(date +'%Y%m%d%H%M')" >> $GITHUB_OUTPUT
 
       - name: Build modules/APKs
         run: if [ -f "config.json" ]; then ./build.sh config.json; else ./build.sh config.toml; fi
@@ -66,12 +64,11 @@ jobs:
           TAG: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           BODY: ${{ steps.get_output.outputs.BUILD_LOG }}
         run: |
-          rel_title=$(find build -maxdepth 1 -name "youtube-revanced-module-*.zip" -printf '%P\n')
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release edit "$TAG" --title "ReVanced" --notes "$BODY"
+            gh release edit "$TAG" --title "Release" --notes "$BODY"
             gh release upload "$TAG" ./build/* --clobber
           else
-            gh release create "$TAG" ./build/* --title "$rel_title" --notes "$BODY"
+            gh release create "$TAG" ./build/* --title "Release" --notes "$BODY"
           fi
 
       - name: Update modules changelog and update json

@@ -11,6 +11,7 @@ cli-source = "MorpheApp/morphe-cli"
 
 [YouTube]
 build-mode = "both"                                                   
+app-name = "YT"
 excluded-patches = "'Enable debugging'"                                
 included-patches = ""                                                 
 patcher-args = "-OdarkThemeBackgroundColor=#FF000000"
@@ -21,7 +22,7 @@ module-prop-name = "yt-rv"
 
 [Music]
 build-mode = "both"
-app-name = "YouTube-Music"
+app-name = "YT-Music"
 excluded-patches = ""
 included-patches = "'Compact header'"
 version = "auto"
@@ -31,8 +32,8 @@ module-prop-name = "ytm-rv"
 arch = "both"
 
 [Reddit]
-app-name = "Reddit ReVanced"
-rv-brand = "ReVanced"
+app-name = "Reddit RVC"
+rv-brand = "RVC"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/redditinc/reddit/"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.reddit.frontpage"
@@ -50,7 +51,7 @@ build-mode = "both"
 include-stock = "split"
 
 [Twitch]
-app-name = "Twitch ReVanced"
+app-name = "Twitch RVC"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 uptodown-dlurl = "https://twitch.en.uptodown.com/android"

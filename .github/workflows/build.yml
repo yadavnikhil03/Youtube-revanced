@@ -66,6 +66,8 @@ jobs:
           # Download latest Zygisk-Detach
           DETACH_URL=$(curl -sL https://api.github.com/repos/j-hc/zygisk-detach/releases/latest | jq -r '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
           if [ -n "$DETACH_URL" ]; then curl -sL "$DETACH_URL" -o "zygisk-detach.zip"; fi
+          DETACH_APK_URL=$(curl -sL https://api.github.com/repos/j-hc/zygisk-detach/releases/latest | jq -r '.assets[] | select(.name | endswith(".apk")) | .browser_download_url' | head -n 1)
+          if [ -n "$DETACH_APK_URL" ]; then curl -sL "$DETACH_APK_URL" -o "zygisk-detach.apk"; fi
           cd ..
       
       - name: Upload release

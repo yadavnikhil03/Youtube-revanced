@@ -25,5 +25,6 @@ Get the [latest CI release](https://github.com/yadavnikhil03/rvx-next/releases/l
 ## Credits
 * [j-hc](https://github.com/j-hc) for [zygisk-detach](https://github.com/j-hc/zygisk-detach) and the core scripts.
 * [ReVanced Team](https://github.com/revanced) for their [patches](https://github.com/revanced/revanced-patches).
+* [NoName-exe](https://github.com/NoName-exe) for his contributions.
 * [Morphe Team](https://github.com/MorpheApp) for [MicroG](https://github.com/MorpheApp/MicroG-RE).
 * [Gnad Gnaoh](https://github.com/gnadgnaoh) for figuring out important fixes.

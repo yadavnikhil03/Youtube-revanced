@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVX Next - Advanced Android Mods</title>
+    <meta name="description" content="Download the most advanced, automated RVX modules for your Android device.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- OpenGraph / Telegram / WhatsApp Preview Tags -->
+    <meta property="og:title" content="RVX Next - Advanced Android Mods">
+    <meta property="og:description" content="The most advanced, automatically built modules and APKs for your favorite streaming apps. No ads, full control.">
+    <meta property="og:image" content="https://yadavnikhil03.github.io/rvx-next-web/banner.png">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- DESIGNER FONTS: Space Grotesk (Headings) and Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <span>RVX Next</span>
+            </div>
+            <div class="nav-links">
+                <a href="https://github.com/yadavnikhil03/rvx-next" target="_blank" class="nav-link">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Split Layout for Desktop -->
+        <div id="landing-split" class="split-layout">
+            
+            <!-- Left Side: Hero -->
+            <div class="hero">
+                <h1 class="hero-title">Experience Android, <br><span class="text-gradient">Without Limits.</span></h1>
+                <p class="hero-desc">The most advanced, automatically built modules and APKs for your favorite streaming apps. No ads, full control, and completely open-source.</p>
+                
+                <div class="hero-buttons">
+                    <a href="https://github.com/yadavnikhil03/rvx-next" target="_blank" class="btn-star">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Star on GitHub
+                    </a>
+                </div>
+
+                <div id="hero-actions" class="hero-actions">
+                    <div class="spinner"></div>
+                    <span class="loading-text">Fetching latest release...</span>
+                </div>
+                <div id="release-info" class="release-info hidden">
+                    <p class="release-text">Latest Version: <span id="release-tag" class="release-tag"></span></p>
+                </div>
+            </div>
+
+            <!-- Right Side: Wizard Question -->
+            <div id="wizard-question" class="wizard-container">
+                <h2 class="wizard-title">Is your phone Rooted?</h2>
+                <div class="wizard-options">
+                    <button class="wizard-btn spotlight-card" onclick="selectPath('non-root')">
+                        <div class="wizard-btn-inner-bg"></div>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        <div class="wizard-btn-text">
+                            <h3>No / I don't know</h3>
+                            <p>Standard method. Safe for all users.</p>
+                        </div>
+                    </button>
+                    
+                    <button class="wizard-btn outline spotlight-card" onclick="selectPath('root')">
+                        <div class="wizard-btn-inner-bg"></div>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+                        <div class="wizard-btn-text">
+                            <h3>Yes</h3>
+                            <p>Advanced. Magisk / KernelSU users only.</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="downloads" class="downloads-section">
+            
+            <!-- Path: Non-Root -->
+            <div id="path-non-root" class="device-section hidden">
+                <button class="back-btn" onclick="goBack()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Back to selection
+                </button>
+                
+                <div class="device-header">
+                    <div>
+                        <h3>Non-Root Phones</h3>
+                        <p class="subtitle">Just download and install these like regular apps.</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content">
+                            <h4>Install MicroG</h4>
+                            <p>You MUST install this first! It allows you to log in to your Google Account safely.</p>
+                            <div id="microg-container" class="card-grid"></div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <h4>Install Apps (APKs)</h4>
+                            <p>Now you can download and install any of the patched apps below. Enjoy!</p>
+                            <div id="apk-container" class="card-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Path: Root -->
+            <div id="path-root" class="device-section hidden">
+                <button class="back-btn" onclick="goBack()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Back to selection
+                </button>
+
+                <div class="device-header">
+                    <div>
+                        <h3>Rooted Phones</h3>
+                        <p class="subtitle">Flash these directly in your root manager (Magisk/KernelSU).</p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content">
+                            <h4>Flash Zygisk Detach (Module)</h4>
+                            <p>Flash the Zygisk Detach <strong>.zip</strong> module in Magisk/KernelSU first.</p>
+                            <div id="detach-module-container" class="card-grid"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <h4>Flash App Modules</h4>
+                            <p>Flash your preferred app module (<strong>.zip</strong>). It will automatically replace your system app.</p>
+                            <div id="module-container" class="card-grid"></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-content">
+                            <h4>Install Detach App & Hide</h4>
+                            <p>Install the Zygisk Detach <strong>.apk</strong> app. Open it and select YouTube/Music to hide them from the Play Store so they don't auto-update.</p>
+                            <div id="detach-app-container" class="card-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Built automatically via GitHub Actions. Not affiliated with Google LLC.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;"><strong>Credits:</strong> ReVanced Team (Patches) • j-hc (Original Builder) • NoName-exe • Nikhil Yadav (RVX Next)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

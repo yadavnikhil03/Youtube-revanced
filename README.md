@@ -1,10 +1,16 @@
 #### ⚠️ Do not download modules from 3rd party sources like random websites you found on Google. Only use this repository. I am not responsible for anything they may contain.
 
+<div align="center">
+
 # RVX Module Builder
 
-[![CI](https://github.com/yadavnikhil03/rvx-next/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/yadavnikhil03/rvx-next/actions/workflows/ci.yml)
+[![CI](https://img.shields.io/github/actions/workflow/status/yadavnikhil03/rvx-next/ci.yml?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/yadavnikhil03/rvx-next/actions/workflows/ci.yml)
+[![Website](https://img.shields.io/badge/Official_Website-Easy_Downloads-ff0055?style=for-the-badge&logo=googlechrome&logoColor=white)](https://yadavnikhil03.github.io/rvx-next/)
 
-Get the [latest CI release](https://github.com/yadavnikhil03/rvx-next/releases/latest).
+*The most advanced, automatically built modules and APKs for your favorite streaming apps.*<br>
+Get raw files directly from the [latest CI release](https://github.com/yadavnikhil03/rvx-next/releases/latest).
+
+</div>
 
 ## Features
 * Updated with the latest versions of patches.

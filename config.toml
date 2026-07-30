@@ -14,7 +14,7 @@ build-mode = "both"
 app-name = "YT"
 excluded-patches = "'Enable debugging'"                                
 included-patches = ""                                                 
-patcher-args = "-OdarkThemeBackgroundColor=#FF000000"
+patcher-args = ""
 version = "auto"                                                   
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube/"
 archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
@@ -41,6 +41,7 @@ uptodown-dlurl = "https://reddit-official-app.en.uptodown.com/android"
 dpi = "120-640dpi"
 
 [Twitter]
+enabled = false
 app-name = "Twitter Piko"
 patches-source = "crimera/piko"
 cli-source = "MorpheApp/morphe-cli"
@@ -51,6 +52,7 @@ build-mode = "both"
 include-stock = "split"
 
 [Twitch]
+enabled = false
 app-name = "Twitch RVC"
 build-mode = "both"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"

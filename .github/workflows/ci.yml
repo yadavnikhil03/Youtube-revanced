@@ -25,7 +25,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if ! git checkout origin/update build.md; then
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "Manual trigger! Forcing build..."
+            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
+          elif ! git checkout origin/update build.md; then
             echo "first time building!"
             echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
           else

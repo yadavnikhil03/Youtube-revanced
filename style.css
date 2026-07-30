@@ -12,11 +12,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Apply Inter globally for body text */
     font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Headings use Space Grotesk */
 h1, h2, h3, h4, h5, h6, .hero-title, .wizard-title, .logo {
     font-family: 'Space Grotesk', sans-serif;
 }
@@ -33,7 +31,6 @@ body {
     overflow-x: hidden;
 }
 
-/* CYBER GRID BACKGROUND */
 body::after {
     content: '';
     position: fixed;
@@ -48,7 +45,6 @@ body::after {
     pointer-events: none;
 }
 
-/* Vivid Animated Ambient Glow */
 body::before {
     content: '';
     position: fixed;
@@ -114,7 +110,6 @@ main {
     animation: fadeIn 0.8s ease-out;
 }
 
-/* SPLIT LAYOUT */
 .split-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -197,7 +192,7 @@ main {
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
 }
 .btn-star svg {
-    color: #fbbf24; /* Golden star */
+    color: #fbbf24;
     transition: transform 0.3s;
 }
 .btn-star:hover svg {
@@ -222,12 +217,11 @@ main {
     margin-left: 0.5rem;
 }
 
-/* SPOTLIGHT CARD LOGIC */
 .spotlight-card {
     position: relative;
-    background: rgba(10,10,12,0.5); /* Slightly darker/more transparent */
+    background: rgba(10,10,12,0.5);
     border: 1px solid var(--border);
-    backdrop-filter: blur(32px); /* Ultimate glassmorphism */
+    backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
     overflow: hidden;
 }
@@ -250,10 +244,9 @@ main {
     opacity: 1;
 }
 
-/* Wizard */
 .wizard-container {
     text-align: center;
-    background: rgba(15, 15, 20, 0.2); /* very translucent to let background show */
+    background: rgba(15, 15, 20, 0.2);
     backdrop-filter: blur(32px);
     -webkit-backdrop-filter: blur(32px);
     border: 1px solid var(--border);
@@ -273,7 +266,6 @@ main {
     gap: 1.5rem;
 }
 
-/* ANIMATED GLOWING BORDER BUTTONS */
 .wizard-btn {
     border-radius: 20px;
     padding: 1.75rem 1.5rem;
@@ -408,7 +400,6 @@ main {
     font-size: 1.1rem;
 }
 
-/* VERTICAL TIMELINE LAYOUT */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -471,7 +462,6 @@ main {
     gap: 1.25rem;
 }
 
-/* Download Cards */
 .dl-card {
     border-radius: 16px;
     padding: 1.25rem;

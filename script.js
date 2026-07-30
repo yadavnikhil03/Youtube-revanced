@@ -7,10 +7,8 @@ const ICONS = {
 };
 
 function selectPath(path) {
-    // Hide the entire landing split layout
     document.getElementById("landing-split").classList.add("hidden");
     
-    // Show downloads section
     if (path === "non-root") {
         document.getElementById("path-non-root").classList.remove("hidden");
     } else {
@@ -19,11 +17,9 @@ function selectPath(path) {
 }
 
 function goBack() {
-    // Hide all paths
     document.getElementById("path-non-root").classList.add("hidden");
     document.getElementById("path-root").classList.add("hidden");
     
-    // Show landing split layout
     document.getElementById("landing-split").classList.remove("hidden");
 }
 
@@ -56,17 +52,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         const detachModuleGrid = document.getElementById("detach-module-container");
         const detachAppGrid = document.getElementById("detach-app-container");
 
-        // Custom sort: Put main YouTube app at the top, then sort alphabetically
         const sortedAssets = data.assets.sort((a, b) => {
             const nameA = a.name.toLowerCase();
             const nameB = b.name.toLowerCase();
             
-            // Check if it's the main YouTube app (doesn't contain 'music')
             const isMainYtA = nameA.includes("youtube-revanced") && !nameA.includes("music");
             const isMainYtB = nameB.includes("youtube-revanced") && !nameB.includes("music");
             
-            if (isMainYtA && !isMainYtB) return -1; // A goes first
-            if (!isMainYtA && isMainYtB) return 1;  // B goes first
+            if (isMainYtA && !isMainYtB) return -1;
+            if (!isMainYtA && isMainYtB) return 1;
             
             return nameA.localeCompare(nameB);
         });
@@ -94,18 +88,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <a href="${asset.browser_download_url}" class="dl-btn">Download</a>
             `;
 
-            if (nameLower.includes("microg")) {
-                microgGrid.appendChild(card);
-            } else if (nameLower.includes("zygisk-detach")) {
-                if (nameLower.endsWith(".apk")) {
+            if (name.endsWith(".apk")) {
+                if (name.includes("microg")) {
+                    microgGrid.appendChild(card);
+                } else if (name.includes("detach")) {
                     detachAppGrid.appendChild(card);
                 } else {
-                    detachModuleGrid.appendChild(card);
+                    apkGrid.appendChild(card);
                 }
-            } else if (nameLower.endsWith(".apk")) {
-                apkGrid.appendChild(card);
-            } else if (nameLower.endsWith(".zip")) {
-                moduleGrid.appendChild(card);
+            } else if (name.endsWith(".zip")) {
+                if (name.includes("detach")) {
+                    detachModuleGrid.appendChild(card);
+                } else {
+                    moduleGrid.appendChild(card);
+                }
             }
         });
 

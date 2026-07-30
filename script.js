@@ -88,16 +88,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <a href="${asset.browser_download_url}" class="dl-btn">Download</a>
             `;
 
-            if (name.endsWith(".apk")) {
-                if (name.includes("microg")) {
+            if (nameLower.endsWith(".apk")) {
+                if (nameLower.includes("microg")) {
                     microgGrid.appendChild(card);
-                } else if (name.includes("detach")) {
+                } else if (nameLower.includes("detach")) {
                     detachAppGrid.appendChild(card);
                 } else {
                     apkGrid.appendChild(card);
                 }
-            } else if (name.endsWith(".zip")) {
-                if (name.includes("detach")) {
+            } else if (nameLower.endsWith(".zip")) {
+                if (nameLower.includes("detach")) {
                     detachModuleGrid.appendChild(card);
                 } else {
                     moduleGrid.appendChild(card);

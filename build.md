@@ -14,3 +14,7 @@ Patches: MorpheApp/patches-1.37.0.mpp
 [Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
 
 CLI: MorpheApp/morphe-desktop-1.12.0-all.jar    
+
+Skipped:  
+Patches: MorpheApp/patches-1.37.0.mpp  
+Patches: crimera/patches-3.8.0.mpp    

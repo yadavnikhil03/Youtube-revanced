@@ -7,10 +7,7 @@ Install [MicroG](https://github.com/MorpheApp/MicroG-RE) to be able to use non-r
 Use [zygisk-detach](https://github.com/j-hc/zygisk-detach) to block Play Store from updating YouTube and YouTube-Music.  
 
 [Main Repo](https://github.com/NoName-exe/revanced)  
-Patches: MorpheApp/patches-1.37.0.mpp  
-[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.37.0)
+Patches: MorpheApp/patches-1.38.0.mpp  
+[Changelog](https://github.com/MorpheApp/morphe-patches/releases/tag/v1.38.0)
 
 CLI: MorpheApp/morphe-desktop-1.12.0-all.jar    
-
-Skipped:  
-Patches: MorpheApp/patches-1.37.0.mpp    
